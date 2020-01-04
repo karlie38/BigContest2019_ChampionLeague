@@ -2,6 +2,10 @@
 
 <div style="text-align: right; font-size:1.5em;"><b>-초코송이-</b> </div> 
 
+## 0. 문제 정의
+ - 엔씨소프트에서 제공하는 ‘리니지’ 고객 활동 데이터를 활용하여 향후 고객 이탈 방지를 위한 프로모션 수행 시 예상되는 잔존가치를 산정하는 예측 모형 개발
+ - 참고: https://www.bigcontest.or.kr/points/content.php#ct04
+ 
 ## 1. 코드 실행에 필요한 패키지 및 라이브러리
 - Anaconda3에 포함된 패키지
    - pandas 
@@ -19,7 +23,7 @@
 	- preprocess 폴더에 모델 학습을 위한 CSV 파일 생성
 		- train\_preprocess\_1.csv 파일 (Survival Time을 예측하기 위한 모델을 학습하기 위한 Train 데이터)
 		- train\_preprocess\_2.csv 파일 (Amount Spent를 예측하기 위한 모델을 학습하기 위한 Train 데이터)
-	- 초코송이/preprocess 폴더에 Test 데이터를 예측하기 위한 모델의 input 데이터(CSV 파일) 생성
+	- preprocess 폴더에 Test 데이터를 예측하기 위한 모델의 input 데이터(CSV 파일) 생성
 		- test1\_preprocess\_1.csv (Test1의 Survival Time을 예측하기 위한 Test1 전처리 데이터)
 		- test1\_preprocess\_2.csv (Test1의 Amount Spent를 예측하기 위한 Test1 전처리 데이터)
 		- test2_preprocess\_1.csv (Test2의 Survival Time을 예측하기 위한 Test2 전처리 데이터)
