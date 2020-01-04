@@ -1,4 +1,4 @@
-# <리니지 고객 활동 데이터를 활용하여 잔존 가치를 고려한 이탈 예측>
+# <빅콘테스트 2019 챔피언리그>
 
 <div style="text-align: right; font-size:1.5em;"><b>-초코송이-</b> </div> 
 
@@ -19,20 +19,20 @@
 
 ## 3. 코드 실행 순서 및 방법
 1. preprocess/preprocess.py
-	- Train 데이터와 Test 데이터를 불러와서 전처리 하는 코드
-	- preprocess 폴더에 모델 학습을 위한 CSV 파일 생성
+	- Train 데이터, Test 데이터 전처리 진행 코드
+	- 실행 시, preprocess 폴더에 모델 학습을 위한 CSV 파일 생성
 		- train\_preprocess\_1.csv 파일 (Survival Time을 예측하기 위한 모델을 학습하기 위한 Train 데이터)
 		- train\_preprocess\_2.csv 파일 (Amount Spent를 예측하기 위한 모델을 학습하기 위한 Train 데이터)
-	- preprocess 폴더에 Test 데이터를 예측하기 위한 모델의 input 데이터(CSV 파일) 생성
+	- 실행 시, preprocess 폴더에 Test 데이터를 예측하기 위한 모델의 input 데이터(CSV 파일) 생성
 		- test1\_preprocess\_1.csv (Test1의 Survival Time을 예측하기 위한 Test1 전처리 데이터)
 		- test1\_preprocess\_2.csv (Test1의 Amount Spent를 예측하기 위한 Test1 전처리 데이터)
 		- test2_preprocess\_1.csv (Test2의 Survival Time을 예측하기 위한 Test2 전처리 데이터)
 		- test2\_preprocess\_2.csv (Test2의 Amount Spent를 예측하기 위한 Test2 전처리 데이터)
 2. model/create_model.py
-	- 모델을 생성하고, preprocess 폴더에 있는 전처리 데이터를 불러와서  학습을 진행한 뒤 학습된 모델 객체를 저장
+	- 모델 틀 생성 및 preprocess 폴더 내 전처리 데이터를 기반으로 학습을 진행 뒤 학습된 모델 객체를 저장
 		- train\_preprocess\_1.csv 파일로 Survival Time 예측을 위한 모델들을 학습
 		- train\_preprocess\_2.csv 파일로 Amount Spent 예측을 위한 모델을 학습
-	- model 폴더에 Test 데이터 예측을 위한 모델 객체 생성
+	- model 폴더 내 Test 데이터 예측을 위한 모델 객체 생성
 		- final\_model\_1.sav (Survival Time - 잔존/비잔존 유저를 예측하기 위한 분류 앙상블 모델)
 		- final\_model\_2.sav (Survival Time - 비잔존 유저의 Survival Time을 예측하기 위한 회귀 앙상블 모델)
 		- final\_model\_3.sav (Amount Spent - 유저의 Amount spent를 예측하기 위한 회귀 모델)
